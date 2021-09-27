@@ -1,0 +1,9 @@
+Unix
+Bash
+Git
+HTML
+CSS
+Front-end
+Back-end
+JavaScript
+Python
