@@ -10,7 +10,10 @@
 
   ***
 
-  
+
+
+
+
 
 1. Navegue até a raiz do projeto com o arquivo .txt;
 2. Verifique se não existe nada sem *"commitar"* utilizando `git status` :
@@ -19,8 +22,6 @@
 4. No arquivo `.txt` , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
 
 - *Exemplo:*
-
-Copiar
 
 ```txt
 O que eu vou aprender na Trybe:

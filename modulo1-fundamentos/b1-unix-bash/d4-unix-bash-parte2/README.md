@@ -7,6 +7,8 @@
 - Alterar as permissões de arquivos e diretórios;
 - Verificar o status e enviar sinais a processos UNIX;
 
+---
+
 
 
 ### Parte I - Comandos de Input e Output
@@ -83,5 +85,4 @@ E pra terminar com a energia ~~óh, ~~lá no alto, que tal aprender agora alguns
 6. Descubra os fatores primos usando o comando `factor` e em seguida o número 42 ;
 7. Veja como fica a sua sorte do dia ao contrário. Dica: utilize o comando `rev` .
 8. Execute o comando `telnet towel.blinkenlights.nl` e espere alguns segundos. Lembre-se que você tem mais exercícios para fazer! 😅
-
 
