@@ -1,0 +1,65 @@
+ol li {
+    background-color: yellow;
+}
+.par{
+    background-color: green;
+}
+.impar{
+    text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+h1 em{
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li {
+    font-size: 20px;
+}
+li em{
+    font-weight: 900;
+}
+#azul{
+    background-color: blue;
+}
+#rosa {
+    background-color: pink;
+}
+
+
+li:nth-child(1) a:hover {
+    color: orange;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 22px;
+}
+
+li:nth-child(2) a:hover {
+    color: green;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 22px;
+}
+
+li:nth-child(3) a:hover {
+    color: black;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 22px;
+}
+
+li:nth-child(5) a:hover {
+    color: green;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 22px;
+}
+li:nth-child(4) a:hover{
+    color: yellow;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 22px;
+}
