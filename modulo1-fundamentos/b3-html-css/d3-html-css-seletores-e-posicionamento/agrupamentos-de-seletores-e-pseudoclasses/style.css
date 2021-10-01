@@ -1,0 +1,13 @@
+p, h1 {
+    text-align: center;
+}
+li:hover{
+    background-color: rgb(167, 167, 168);
+    transition: 0.5s;
+}
+li:active{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+ul, ol {
+    list-style: none;
+}
