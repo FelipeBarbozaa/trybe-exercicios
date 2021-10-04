@@ -18,8 +18,8 @@ console.log (a % b)
 
 //2) Faça um programa que retorne o maior de dois números. Defina no começo do programa duas constantes com os valores que serão comparados.
 
-const a = 5;
-const b = 2;
+// a = 5
+// b = 2
 
 if (a > b){
     console.log (`O número ${a} é maior que o número ${b}`)
@@ -29,8 +29,9 @@ if (a > b){
 
 //3) Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
 
-const a = 6;
-const b = 2;
+
+// a = 5
+// b = 2
 const c = 10;
 
 if (a > b && a > c){
@@ -62,6 +63,85 @@ const ladoB = 60;
 const ladoC = 60;
 
 if (ladoA + ladoB + ladoC == 180){
+    console.log(true)
+} else {
+    console.log(false)
+}
+
+/*6) Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+
+Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+
+Se a peça passada for inválida, o programa deve retornar uma mensagem de erro. */
+
+let peça = "CaVaLO";
+let peçaLowerCase = peça.toLowerCase()
+
+switch (peçaLowerCase){
+    case "rei":
+        console.log ('O rei pode mover-se em todas as direções (horizontal, vertical e diagonal) somente uma casa de cada vez.')
+    break;
+
+    case "rainha":
+        console.log('A rainha move-se ao longo da horizontal, vertical e diagonais mas não pode pular outras peças.')
+        break;
+
+    case "bispo":
+        console.log('O bispo move-se ao longo da diagonal. Não pode pular outras peças.')
+        break;
+    
+    case "cavalo":
+        console.log ('É a única peça que pode pular as outras. O movimento do cavalo é em forma de “L”, quer dizer, duas casas em sentido horizontal e mais uma na vertical ou vice-versa.')
+        break;
+
+    case "torre":
+        console.log ('A torre movimenta-se pela vertical ou horizontal, mas não pode pular outras peças.')
+        break;
+
+    case "peão":
+        console.log('O peão movimenta-se apenas uma casa para frente e somente captura outras peças na diagonal. Opcionalmente, cada peão pode avançar duas casas no seu primeiro movimento do jogo.')
+        break;
+
+    default:
+        console.log('Digite uma peça válida!')
+}
+
+/*7) Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+Porcentagem >= 90 -> A
+Porcentagem >= 80 -> B
+Porcentagem >= 70 -> C
+Porcentagem >= 60 -> D
+Porcentagem >= 50 -> E
+Porcentagem < 50 -> F */
+
+let notaPorcentagem = 89;
+
+if (notaPorcentagem > 100 || notaPorcentagem < 0){
+    console.log('Digite um valor válido!')
+} else if (notaPorcentagem >= 90){
+    console.log('nota A')
+} else if(notaPorcentagem >= 80){  
+    console.log('nota B')
+} else if(notaPorcentagem >= 70){
+    console.log('nota C')
+} else if(notaPorcentagem >= 60){
+    console.log('nota D')
+} else if(notaPorcentagem >= 50){
+    console.log('nota E')
+} else {
+    console.log('nota F')
+} 
+
+
+/*8) Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false . 
+''
+Bonus: use somente um if .
+
+a = 5
+b = 2
+c = 10 */
+
+if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0){
     console.log(true)
 } else {
     console.log(false)
