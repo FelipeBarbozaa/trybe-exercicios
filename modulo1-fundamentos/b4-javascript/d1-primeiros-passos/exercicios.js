@@ -235,6 +235,15 @@ if (salarioLiquido < 1903.99){
 } else if (salarioLiquido > 1903.98 && salarioLiquido < 2826.66){
     ir = (salarioLiquido*0.075) - 142.80
     salarioLiquido = salarioLiquido - ir
+} else if (salarioLiquido > 2826.65 && salarioLiquido < 3751.06){
+    ir = (salarioLiquido*0.15) - 354.80
+    salarioLiquido = salarioLiquido - ir
+} else if (salarioLiquido > 3751.05 && salarioLiquido < 4664.69){
+    ir = (salarioLiquido*0.225) - 636.13
+    salarioLiquido = salarioLiquido - ir
+} else {
+    ir = (salarioLiquido*0.275) - 869.36
+    salarioLiquido = salarioLiquido - ir
 }
 
 console.log(salarioLiquido)
