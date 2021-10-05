@@ -213,7 +213,7 @@ Resultado: R$ 2.612,55.
 
 Dica: que tal identificar as alíquotas com variáveis de nomes explicativos? */
 
-let salarioBruto = 3000;
+let salarioBruto = 6000;
 let salarioLiquido;
 let ir;
 
