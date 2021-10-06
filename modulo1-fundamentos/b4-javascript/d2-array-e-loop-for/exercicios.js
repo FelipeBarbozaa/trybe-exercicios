@@ -67,3 +67,28 @@ if (impar.length <= 0){
     console.log('Nenhum valor impar encontrado')
 }
 console.log(impar)
+
+//7) Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+
+let menor = numbers[0]; 
+for (let numeros of numbers){
+    if (menor > numeros){
+        menor = numeros
+    }
+}
+console.log (menor)
+
+
+//8) Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+
+let novaArray = []
+for (let index = 1; index < 26; index +=1 ){
+    novaArray.push(index)
+}
+console.log(novaArray)
+
+//9) Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+for (let numeros of novaArray){
+    console.log(numeros/2)
+}
