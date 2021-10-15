@@ -89,3 +89,31 @@ let array = [2, 3, 2, 5, 8, 2, 3]
 console.log(maisRepete(array))
 
 
+//6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+function somatorio(numero){
+  let valorTotal = 0
+  for(let index = 1; index<=numero; index+=1){
+    valorTotal += index
+  }
+  return valorTotal
+}
+
+console.log(somatorio(5))
+
+//7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+
+function compararFinal(word, ending){
+  word = word.slice(-ending.length)
+  word = word.split("").reverse().join("")
+  ending = ending.split("").reverse().join("")
+  if(word === ending){
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(compararFinal('trybe', 'be'))
+console.log(compararFinal('joaofernando', 'fernan'))
+
+
