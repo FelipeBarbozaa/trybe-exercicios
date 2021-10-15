@@ -25,7 +25,7 @@ info['recorrente'] = 'Sim'
 console.log(info)
 
 //3 - Faça um for/in que mostre todas as chaves do objeto. 
-
+console.log('agora')
 for (let index in info){
   console.log(index)
 }
