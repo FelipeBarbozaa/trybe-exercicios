@@ -15,3 +15,22 @@ console.log(document.querySelector("#elementoOndeVoceEsta").previousElementSibli
 console.log(document.querySelector("#elementoOndeVoceEsta").nextSibling)
 console.log(document.querySelector("#elementoOndeVoceEsta").nextElementSibling)
 console.log(document.querySelector("#pai").firstElementChild.nextElementSibling.nextElementSibling)
+
+/* Crie um irmão para elementoOndeVoceEsta .
+Crie um filho para elementoOndeVoceEsta .
+Crie um filho para primeiroFilhoDoFilho .
+A partir desse filho criado, acesse terceiroFilho .
+
+let posicao = document.querySelector("#pai")
+let irmao = document.createElement('section')
+posicao.appendChild(irmao)
+
+*/
+
+document.querySelector("#pai").appendChild(document.createElement('p'))
+
+document.querySelector("#elementoOndeVoceEsta").appendChild(document.createElement('p'))
+
+document.querySelector("#primeiroFilhoDoFilho").appendChild(document.createElement('p'))
+
+console.log(document.querySelector("#primeiroFilhoDoFilho p").parentElement.parentElement.nextElementSibling)
