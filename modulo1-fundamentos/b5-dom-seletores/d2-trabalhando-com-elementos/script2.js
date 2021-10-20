@@ -44,7 +44,23 @@ Adicione a classe title na tag h1 criada;
 Adicione a classe description nas 3 tags h3 criadas;
 Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
 Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+
 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 */
 
+document.getElementsByTagName('h1')[0].className = "title"
+
+for (let i = 0; i < 3; i += 1){
+  document.querySelectorAll(".main-content h3")[i].className = "description"
+}
+
+document.querySelector(".main-content").removeChild(document.querySelector(".left-content"))
+
+document.querySelector(".right-content").style = "margin: auto"
+
+document.querySelector(".center-content").parentElement.style = "background-color: green"
+
+for (let i = 0; i < 2; i += 1) {
+  document.querySelector(".right-content ul").removeChild(document.querySelector(".right-content ul").lastChild)
+}
