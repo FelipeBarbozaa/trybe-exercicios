@@ -31,6 +31,27 @@ document.querySelector("#pai").appendChild(document.createElement('p'))
 
 document.querySelector("#elementoOndeVoceEsta").appendChild(document.createElement('p'))
 
-document.querySelector("#primeiroFilhoDoFilho").appendChild(document.createElement('p'))
+document.querySelector("#primeiroFilhoDoFilho").appendChild(document.createElement('p')).className = "teste"
 
 console.log(document.querySelector("#primeiroFilhoDoFilho p").parentElement.parentElement.nextElementSibling)
+
+
+//Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+
+
+let teste = document.querySelector("#primeiroFilhoDoFilho");
+let remover = document.querySelector("#primeiroFilhoDoFilho p");
+
+document.querySelector("#pai").removeChild(document.querySelector("#primeiroFilho"))
+
+document.querySelector("#elementoOndeVoceEsta").removeChild(document.querySelector("#segundoEUltimoFilhoDoFilho"))
+
+document.querySelector("#elementoOndeVoceEsta").removeChild(document.querySelector("#elementoOndeVoceEsta").lastChild)
+
+document.querySelector("#pai").removeChild(document.querySelector("#terceiroFilho"))
+
+document.querySelector("#pai").removeChild(document.querySelector("#pai").lastElementChild)
+document.querySelector("#pai").removeChild(document.querySelector("#pai").lastElementChild)
+
+
+
