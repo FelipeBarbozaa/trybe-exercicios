@@ -86,4 +86,17 @@ function clicar() {
 
 document.querySelector("#btn-friday").addEventListener('click', clicar)
 
+//aprendi a usar funcao dentro do eventlistener
+let dias = document.querySelectorAll(".day")
+for (let valor of dias) {
+  valor.addEventListener('mouseover', function(valor) {
+    valor.target.style = "font-size: 30px"
+  })
+  valor.addEventListener('mouseout', function(valor) {
+    valor.target.style = "font-size: 16px"
+  })
+}
+
+
+
 
