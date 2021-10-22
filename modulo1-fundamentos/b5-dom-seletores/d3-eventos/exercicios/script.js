@@ -35,7 +35,7 @@ function calendario() {
   }
 
 }
-calendario(), holiday()
+calendario(), holiday(), teste()
 
 function holiday(Feriados) {
   document.querySelector(".buttons-container").appendChild(document.createElement("button"))
@@ -60,5 +60,30 @@ function mudarCor() {
   }
   condicao += 1
 }
+
+function teste(Sextafeira) {
+  document.querySelector(".buttons-container").appendChild(document.createElement("button"))
+  document.querySelector(".buttons-container").lastChild.id = "btn-friday"
+}
+
+let contador = 0
+function clicar() {
+  let sexta = document.querySelectorAll(".friday")
+  let sextaDias = [4, 11, 18, 25]
+  if (contador %2 === 0) {
+    for (let dias in sexta) {
+      document.querySelectorAll(".friday")[dias].innerText = "SEXTOU!!"
+    }
+  }
+  if (contador %2 === 1) {
+    for (let i = 0; i < sextaDias.length; i += 1) {
+      document.querySelectorAll(".friday")[i].innerText = sextaDias[i]
+    }
+  }
+  contador += 1
+  console.log(contador)
+}
+
+document.querySelector("#btn-friday").addEventListener('click', clicar)
 
 
