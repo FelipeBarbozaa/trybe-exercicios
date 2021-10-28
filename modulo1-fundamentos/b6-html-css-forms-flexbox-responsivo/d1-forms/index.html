@@ -9,14 +9,15 @@
 <body>
   <form action="" method="get">
   <p>Email</p>
-  <input type="text" placeholder="Digite seu email" name="email" autocomplete="off" autofocus required>
+  <input type="email" id="inputEmailUser" placeholder="Digite seu email" name="email" autocomplete="off" autofocus required>
   <p>Senha</p>
   <input type="password" placeholder="Digite sua senha" name="senha" id="" required>
   <br>
   <br>
   <label for="lembrar"><input type="checkbox" name="lembrar" id="lembrar">Lembre-me</label>
-  <button type="submit">Entrar</button>
+  <button id="botao" type="submit">Entrar</button>
 </form>
-
+<p id="emailUser"></p>
+  <script src="script.js"></script>
 </body>
 </html>
