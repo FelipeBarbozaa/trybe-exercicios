@@ -1,3 +1,4 @@
+let nomeErro = false
 const states = [
   { value: 'AC', label: 'Acre' },
   { value: 'AL', label: 'Alagoas' },
@@ -37,6 +38,49 @@ const states = [
     } 
   };
 
-  document.querySelector('#enviar').addEventListener('click', (value) => {
-    value.preventDefault()
+
+document.querySelector('#inicio').addEventListener('keyup', () => {
+  const valor = document.querySelector('#inicio').value
+  if (valor.length == 2) {
+    document.querySelector('#inicio').value += '/'
+  }
+  if(valor.length == 5) {
+    document.querySelector('#inicio').value += '/'
+  }
 })
+
+document.querySelector('#inicio').addEventListener('keydown', function(event) {
+  var tecla = event.keyCode;
+  if (tecla === 8) {
+    document.querySelector('#inicio').value = ''
+  }
+})
+
+document.querySelector('#enviar').addEventListener('click', (event) => {
+  if (document.querySelector('#nome').value === "" ) {
+    event.preventDefault()
+    alert('Nome não pode estar vázio!')
+  } else if (document.querySelector('#email').value === "" ) {
+    event.preventDefault()
+    alert('Email não pode estar vázio!')
+  } else if (document.querySelector('#cpf').value.length < 11 ) {
+    event.preventDefault()
+    alert('CPF precisa ter 11 digitos!')
+  } else if (document.querySelector('#endereço').value === "" ) {
+    event.preventDefault()
+    alert('Endereço não pode estar vázio!')
+  } else if (document.querySelector('#cidade').value === "" ) {
+    event.preventDefault()
+    alert('Cidade não pode estar vázio!')
+  } else if (document.querySelector('#textarea').value === "" ) {
+    event.preventDefault()
+    alert('Experiência não pode estar vázio!')
+  } else if (document.querySelector('#cargo').value === "" ) {
+    event.preventDefault()
+    alert('Cargo não pode estar vázio!')
+  } else if (document.querySelector('#descricao').value === "") {
+    event.preventDefault()
+    alert('Descrição não pode estar vázio!')
+  }
+})
+
