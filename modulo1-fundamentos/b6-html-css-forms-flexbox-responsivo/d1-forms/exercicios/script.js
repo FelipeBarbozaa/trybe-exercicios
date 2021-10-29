@@ -30,8 +30,8 @@ const states = [
 
   window.onload = () => {
     for (let index = 0; index < states.length; index += 1) {
-      document.querySelector('#listaDeEstados').appendChild(document.createElement('option'));
-      let opcao = document.querySelectorAll('#listaDeEstados option');
+      document.querySelector('#estado').appendChild(document.createElement('option'));
+      let opcao = document.querySelectorAll('#estado option');
       opcao[index].innerText = states[index].label;
       opcao[index].value = states[index].value;
     } 

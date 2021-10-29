@@ -1,0 +1,7 @@
+.col-md-4, .col-md-2 {
+  display: inline-block;
+}
+
+input {
+  background-color: red;
+}
