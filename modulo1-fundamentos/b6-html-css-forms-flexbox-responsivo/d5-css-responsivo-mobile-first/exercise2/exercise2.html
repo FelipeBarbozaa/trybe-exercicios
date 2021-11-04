@@ -5,48 +5,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Media Query Exercise 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="exercise2.css" />
 </head>
 <body>
   <div class="container">
-    <header>
+    <header class="menu-container">
       <p>Alice's Adventures in Wonderland</p>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+      <nav id="nav">
+        <button id="btn-mobile"><img id="btn-menu" src="menu.svg" alt=""></button>
+        <ul id="lista-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <aside class="aside-one">
-      <h2>Chapters</h2>
-      <ul>
-        <li>I. Down the Rabbit-Hole</li>
-        <li>II. The Pool of Tears</li>
-        <li>III. A Caucus-Race and a Long Tale</li>
-        <li>IV. The Rabbit Sends in a Little Bill</li>
-        <li>V. Advice from a Caterpillar</li>
-        <li>VI. Pig and Pepper</li>
-        <li>VII. A Mad Tea-Party</li>
-        <li>VIII. The Queen's Croquet-Ground</li>
-        <li>IX. The Mock Turtle's Story</li>
-        <li>X. The Lobster Quadrille</li>
-        <li>XI. Who Stole the Tarts?</li>
-        <li>XII. Alice's Evidence</li>
-      </ul>
-    </aside>
-    <aside class="aside-two">
-      <h2>Information</h2>
-      <ul>
-        <li>Title: Alice's Adventures in Wonderland</li>
-        <li>Author: Lewis Carroll</li>
-        <li>Release Date: June 25, 2008 [EBook #11]</li>
-        <li>Last Updated: July 14, 2014</li>
-        <li>Language: English</li>
-      </ul>
-    </aside>
+    <div class="container-1">
+      <aside class="aside-one">
+        <h2>Chapters</h2>
+        <ul class="lista-chapters">
+          <li>I. Down the Rabbit-Hole</li>
+          <li>II. The Pool of Tears</li>
+          <li>III. A Caucus-Race and a Long Tale</li>
+          <li>IV. The Rabbit Sends in a Little Bill</li>
+          <li>V. Advice from a Caterpillar</li>
+          <li>VI. Pig and Pepper</li>
+          <li>VII. A Mad Tea-Party</li>
+          <li>VIII. The Queen's Croquet-Ground</li>
+          <li>IX. The Mock Turtle's Story</li>
+          <li>X. The Lobster Quadrille</li>
+          <li>XI. Who Stole the Tarts?</li>
+          <li>XII. Alice's Evidence</li>
+        </ul>
+      </aside>
+      <aside class="aside-two">
+        <h2>Information</h2>
+        <ul>
+          <li>Title: Alice's Adventures in Wonderland</li>
+          <li>Author: Lewis Carroll</li>
+          <li>Release Date: June 25, 2008 [EBook #11]</li>
+          <li>Last Updated: July 14, 2014</li>
+          <li>Language: English</li>
+        </ul>
+      </aside>
+    </div>
     <article class="main-content">
       <h1>
         CHAPTER I. Down the Rabbit-Hole
@@ -219,5 +226,6 @@
       </p>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
