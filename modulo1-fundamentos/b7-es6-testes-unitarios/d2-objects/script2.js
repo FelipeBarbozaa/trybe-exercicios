@@ -8,4 +8,4 @@ const coolestTvShow = {
 };
 
 let obj = Object.entries(coolestTvShow)
-console.log(obj[0])
+console.log(obj)
