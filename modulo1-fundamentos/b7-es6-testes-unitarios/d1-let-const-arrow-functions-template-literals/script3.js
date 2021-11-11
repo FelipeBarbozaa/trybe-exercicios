@@ -6,7 +6,7 @@ const fatorial = numero => {
   return resultado;
 }
 
-console.log(fatorial(5))
+
 
 
 const fatorial2 = (numero) => (
@@ -14,4 +14,19 @@ const fatorial2 = (numero) => (
 );
 
 
-console.log(fatorial2(5))
+const maiorPalavra = array => {
+  const palavra = array.split(' ')
+  let maiorPalavra = ''
+  console.log(palavra)
+
+  for (let i = 0; i < palavra.length; i += 1) {
+    for (let index = 1; index < palavra.length - 1; index += 1) {
+      if (palavra[i].length >= palavra[index].length) {
+        maiorPalavra = palavra[i]
+      }
+    }
+  }
+  return maiorPalavra
+}
+
+console.log(maiorPalavra('Antônio foi no banheiro e não sabemos o que aconteceu'))
