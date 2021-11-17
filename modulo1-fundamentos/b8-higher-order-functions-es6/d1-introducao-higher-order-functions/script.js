@@ -15,3 +15,25 @@ const newEmployees = () => {
   return employees;
 };
 
+
+
+
+
+const sorteio = (numero, func) => {
+  const numeroSorteado = Math.ceil(Math.random()*5)
+  func(numero, numeroSorteado)
+}
+
+const comparar = (numero, numeroSorteado) => {
+  if (numero === numeroSorteado) {
+    console.log(`Parabéns, você acertou!!
+Numero escolhido: ${numero}
+Numero sorteado: ${numeroSorteado}`) 
+  } else {
+    console.log(`Que pena, você errou!!
+Numero escolhido: ${numero}
+Numero sorteado: ${numeroSorteado}`)
+  }
+}
+
+sorteio(3, comparar)
