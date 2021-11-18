@@ -66,11 +66,4 @@ function authorBornIn1947() {
   return result.author.name
 }
 
-
-function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
-  return nameBook;
-}
+console.log(authorBornIn1947())
