@@ -63,3 +63,15 @@ const books = [
 
 // 5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
 
+function everyoneWasBornOnSecXX() {
+  let ano = []
+  const pegarAno = books.forEach(element => {
+    ano.push(element.author.birthYear)
+  });
+  const verificar = ano.every(e => {
+    e > 1900 && e < 2000
+  })
+  console.log(verificar)
+}
+
+everyoneWasBornOnSecXX()

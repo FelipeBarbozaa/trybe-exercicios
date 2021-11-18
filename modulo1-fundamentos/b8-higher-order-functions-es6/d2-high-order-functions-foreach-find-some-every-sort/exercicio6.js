@@ -63,3 +63,15 @@ const books = [
 
 // 6 - Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
 
+function someBookWasReleaseOnThe80s() {
+  let ano = []
+  const pegarAno = books.forEach(element => {
+    ano.push(element.releaseYear)
+  });
+  
+  const checar = ano.some(e => e > 1980 && e < 1990)
+  console.log(checar)
+}
+
+someBookWasReleaseOnThe80s()
+
