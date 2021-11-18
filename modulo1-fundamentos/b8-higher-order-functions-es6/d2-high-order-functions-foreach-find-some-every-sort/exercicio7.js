@@ -62,4 +62,26 @@ const books = [
 ];
 
 // 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+function authorUnique() {
+  const ano = []
+  const nascimento = books.forEach(e => {
+    ano.push(e.author.birthYear)
+  });
+  checar(ano)
+}
 
+function checar (ano) {
+  let resultado = false
+  for (i = 1; i < ano.length; i += 1) {
+    for (let index = 0; index < ano.length - 1; index += 1) {
+      if (i !== index) {
+        if (ano[i] === ano [index]){
+          resultado = true
+        }
+      }
+    }
+  }
+  console.log(resultado)
+}
+
+authorUnique()
