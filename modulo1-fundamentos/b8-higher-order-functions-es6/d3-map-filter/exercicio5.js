@@ -63,9 +63,6 @@ const books = [
 
 // 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
-const livro = (obj) => {
-  const teste = obj.filter((callback) => callback.genre === 'Ficção Científica' || callback.genre === 'Fantasia')
-  const nome = teste.map((callback) => callback.author.name).sort()
-  return nome
-}
+const livro = ((obj) => obj.filter((callback) => callback.genre === 'Ficção Científica' || callback.genre === 'Fantasia').map((callback) => callback.author.name).sort())
+
 console.log(livro(books))

@@ -64,8 +64,5 @@ const books = [
 // 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 
 
-const livro = (obj) => {
-  const nome = obj.filter((callback) => (2020 - callback.releaseYear > 60)).map((callback) => callback.name)
-  return nome
-}
+const livro = ((obj) => obj.filter((callback) => (2020 - callback.releaseYear > 60)).map((callback) => callback.name))
 console.log(livro(books))
