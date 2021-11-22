@@ -62,3 +62,6 @@ const books = [
 ];
 
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+
+const nome = ((obj) => obj.map((callback) => callback.author.name).filter((callback) => callback.includes('.'))[1])
+console.log(nome(books))
