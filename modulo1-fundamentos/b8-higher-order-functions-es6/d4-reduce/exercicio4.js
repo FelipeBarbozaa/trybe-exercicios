@@ -65,3 +65,4 @@ const books = [
 
 const maiorLivro = books.reduce((sum, e) => (sum.name.length > e.name.length) ? sum : e)
 console.log(maiorLivro)
+
