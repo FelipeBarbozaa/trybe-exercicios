@@ -9,14 +9,3 @@ const names = [
 const quantidade = names.join().split('').reduce((cum, e) => (e === 'a' || e === 'A')? cum+1: cum+0, 0)
 console.log(quantidade)
 // retorna 20
-
-
-
-
-
-
-
-
-  
-
-

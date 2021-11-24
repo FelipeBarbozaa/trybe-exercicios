@@ -9,8 +9,3 @@ describe('Requisito 1 - Função de soma', () => {
     expect(10).toEqual(sum(5, 5))
   })
 })
-
-
-test('A função recebe 5 e 4 e retorna 9', () => {
-  expect(sum(5, 4)).toBe(9)
-})

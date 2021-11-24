@@ -65,7 +65,7 @@ const books = [
 
 function smallerName() {
   const livros = []
-  let menorLivro = books.forEach((e, indice) => {
+  let menorLivro = books.forEach((e) => {
     livros.push(e.name)
   })
   let nameBook = livros[0]
