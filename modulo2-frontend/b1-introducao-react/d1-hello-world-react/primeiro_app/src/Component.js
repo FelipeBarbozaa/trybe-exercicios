@@ -9,4 +9,4 @@ class SobreMim extends React.Component {
     }
 }
 
-export default Component
+export default SobreMim

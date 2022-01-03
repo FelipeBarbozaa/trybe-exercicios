@@ -1,8 +1,8 @@
-import Component from './Component'
+import SobreMim from './Component'
 import './App.css';
 
 function App() {
-  return <Component/>
+  return <SobreMim/>
 }
 
 export default App;
