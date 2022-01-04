@@ -14,4 +14,4 @@ class Pokemon extends React.Component {
     }
 }
 
-export default Pokemo
+export default Poke
