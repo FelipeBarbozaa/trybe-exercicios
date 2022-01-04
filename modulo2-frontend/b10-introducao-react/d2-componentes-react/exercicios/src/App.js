@@ -6,7 +6,7 @@ const staringCat = 'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1
 function App() {
   return (
     <section>
-      <Image source={staringat} alternativeText='Cute cat staring'/>
+      <Image source={staringt} alternativeText='Cute cat staring'/>
     </section>
   );
 }
