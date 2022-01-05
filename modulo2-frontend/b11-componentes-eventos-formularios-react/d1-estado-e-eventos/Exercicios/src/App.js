@@ -1,4 +1,4 @@
-import React from 'r
+import React from 'react'
 import './App.css';
 
 class App extends React.Component {
@@ -21,8 +21,8 @@ class App extends React.Component {
     })
   }
 
-  mudarCor(num) 
-    return num % 2 === 0 ? 'green' : 'white'
+  mudarCor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
   }
 
   render() {
