@@ -1,29 +1,38 @@
 import React from 'react'
 import './App.css';
 
-function click1() {
-  console.log('click1')
-}
-
-function click2() {
-  console.log('click2')
-}
-
-function click3() {
-  console.log('click3')
-}
-
 class App extends React.Component {
-  render() {
 
+  constructor() {
+    super()
+
+    this.state = {
+      quantidadeDeClique: 0,
+    }
+
+    this.click = this.click.bind(this)
+  }
+
+  click() {
+    this.setState(({ quantidadeDeClique }) => ({
+      quantidadeDeClique: quantidadeDeClique + 1
+    }))
+  }
+
+  mudarCor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
+  }
+
+
+  render() {
+    const clicks = this.state.quantidadeDeClique
     return (
       <section>
-      <button onClick={click1}>Button 1</button>
-      <button onClick={click2}>Button 2</button>
-      <button onClick={click3}>Button 3</button>
+      <button onClick={ this.click }
+      style={{ backgroundColor: this.mudarCor(clicks)}}
+      >{clicks}</button>
     </section>
   );
-}
-}
+}}
 
 export default App;
