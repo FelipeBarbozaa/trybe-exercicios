@@ -14,15 +14,16 @@ class App extends React.Component {
   }
 
   click() {
-    this.setState(({ quantidadeDeClique }) => ({
-      quantidadeDeClique: quantidadeDeClique + 1
-    }))
+    this.setState((e, _props) => ({
+      quantidadeDeClique: e.quantidadeDeClique + 1
+    }), () => {
+      console.log(`${this.mudarCor(this.state.quantidadeDeClique)}`)
+    })
   }
 
   mudarCor(num) {
     return num % 2 === 0 ? 'green' : 'white';
   }
-
 
   render() {
     const clicks = this.state.quantidadeDeClique
