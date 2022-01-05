@@ -21,8 +21,8 @@ class App extends React.Component {
     })
   }
 
-  mudarCor(num) {
-    return num % 2 === 0 ? 'green' : 'white';
+  mudarCor(num) 
+    return num % 2 === 0 ? 'green' : 'white'
   }
 
   render() {
