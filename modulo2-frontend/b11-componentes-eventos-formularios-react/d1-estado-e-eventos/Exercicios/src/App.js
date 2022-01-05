@@ -1,4 +1,4 @@
-import React from 'rea
+import React from 'r
 import './App.css';
 
 class App extends React.Component {
