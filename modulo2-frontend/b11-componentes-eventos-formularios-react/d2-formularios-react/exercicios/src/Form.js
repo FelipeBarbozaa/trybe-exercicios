@@ -1,4 +1,9 @@
 import React from 'react';
+import Nome from './Nome';
+import Email from './Email'
+import FrutaFavorita from './FrutaFavorita'
+import Description from './Description';
+import Alergia from './Alergia';
 
 class Form extends React.Component {
   constructor() {
@@ -24,62 +29,12 @@ class Form extends React.Component {
     return (
       <main>
         <form>
-
-          <label>
-            Digite seu nome: 
-            <input 
-              type='text' 
-              name='name'
-              value={this.state.nome}
-              onChange={this.handleRefreshForm}
-            />
-          </label>
-
-          <label>
-            Digite seu email:
-            <input 
-              type='text'
-              name='email'
-              value={this.state.email}
-              onChange={this.handleRefreshForm}
-            />
-          </label>
-
-          <label> Escolha sua fruta favorita:
-            <select
-              name='favoriteFruit'
-              value={this.state.favoriteFruit}
-              onChange={this.handleRefreshForm}>
-              <option value="laranja">Laranja</option>
-              <option value="limao">Limão</option>
-              <option value="coco">Coco</option>
-              <option value="manga">Manga</option>
-            </select>
-          </label>
-
-          <label>
-            Fale um pouco sobre você:
-            <textarea
-              name='description'
-              value={this.state.description}
-              onChange={this.handleRefreshForm}
-            />
-          </label>
-
-          <fieldset>
-            <label>É alergico a alguma coisa?
-              <input
-                type='checkbox'
-                name='alergia'
-                value={this.state.alergia}
-                onChange={this.handleRefreshForm}
-              />
-            </label>
-          </fieldset>
-
+          <Nome value={this.state.name} handleRefreshForm={this.handleRefreshForm}/>
+          <Email value={this.state.email} handleRefreshForm={this.handleRefreshForm}/>
+          <FrutaFavorita value={this.state.favoriteFruit} handleRefreshForm={this.handleRefreshForm}/>
+          <Description value={this.state.description} handleRefreshForm={this.handleRefreshForm}/>
+          <Alergia value={this.state.alergia} handleRefreshForm={this.handleRefreshForm}/>
           <input type="file" />
-
-
         </form>
       </main>
     )
