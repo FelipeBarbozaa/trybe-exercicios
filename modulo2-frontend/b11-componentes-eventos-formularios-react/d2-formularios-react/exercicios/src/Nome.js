@@ -2,7 +2,12 @@ import React from 'react';
 
 class Nome extends React.Component {
   render() {
-    const { value, handleRefreshForm } = this.props
+    const { value, handleRefreshForm, handleErrorForm } = this.props
+    let error = undefined
+    if (value.length > 120) {
+      error = "Texto muito grande!"
+    }
+    
     return (
       <label>
             Digite seu nome: 
@@ -12,6 +17,7 @@ class Nome extends React.Component {
               value={ value }
               onChange={handleRefreshForm}
             />
+            <p>{error !== undefined? error : ''}</p>
           </label>
     )
   }

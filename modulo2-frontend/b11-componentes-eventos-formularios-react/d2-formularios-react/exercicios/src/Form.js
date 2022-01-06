@@ -29,7 +29,7 @@ class Form extends React.Component {
     return (
       <main>
         <form>
-          <Nome value={this.state.name} handleRefreshForm={this.handleRefreshForm}/>
+          <Nome value={this.state.name} handleRefreshForm={this.handleRefreshForm} handleErrorForm={this.handleErrorForm}/>
           <Email value={this.state.email} handleRefreshForm={this.handleRefreshForm}/>
           <FrutaFavorita value={this.state.favoriteFruit} handleRefreshForm={this.handleRefreshForm}/>
           <Description value={this.state.description} handleRefreshForm={this.handleRefreshForm}/>
