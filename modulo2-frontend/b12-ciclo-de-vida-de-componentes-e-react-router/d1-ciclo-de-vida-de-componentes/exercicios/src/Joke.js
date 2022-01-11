@@ -6,6 +6,7 @@ class Joke extends React.Component {
 
     this.state = {
       jokeObj: '',
+      loading: true,
       jokes: [],
     }
 
@@ -15,11 +16,18 @@ class Joke extends React.Component {
   }
 
   async fetchJoke() {
-    const requestHeaders = { headers: { Accept: 'application/json'} };
-    const url = 'https://icanhazdadjoke.com/';
-    const requestReturn = await fetch(url, requestHeaders)
-    const requestObject = await requestReturn.json();
-    this.setState( {jokeObj: requestObject} )
+    this.setState(
+      { loading: true },
+      async () => {
+        const requestHeaders = { headers: { Accept: 'application/json'} };
+        const url = 'https://icanhazdadjoke.com/';
+        const requestReturn = await fetch(url, requestHeaders)
+        const requestObject = await requestReturn.json();
+        this.setState( {
+          loading: false,
+          jokeObj: requestObject
+        })
+      })
   }
 
   componentDidMount() {
@@ -27,7 +35,11 @@ class Joke extends React.Component {
   }
 
   saveJoke() {
-    this.setState( { jokes: [...this.state.jokes, this.state.jokeObj]} )
+    this.setState(({ jokes, jokeObj }) => ({
+      jokes: [...jokes, jokeObj]
+    }))
+
+    this.fetchJoke()
   }
 
   renderJokeElement() {
@@ -43,9 +55,19 @@ class Joke extends React.Component {
   
 
   render() {
-    const { jokes } = this.state;
+    const { loading, jokes } = this.state;
+    const loadingElement = <span>Loading...</span>
+    
     return (
-      <h1>{this.state.jokeObj.joke}</h1>
+      <div>
+        <span>
+          {jokes.map(({id, joke}) => (
+            <p key={id}>{joke}</p>
+          ))}
+        </span>
+
+        <p>{loading? loadingElement : this.renderJokeElement()}</p>
+      </div>
     )
   }
 }
