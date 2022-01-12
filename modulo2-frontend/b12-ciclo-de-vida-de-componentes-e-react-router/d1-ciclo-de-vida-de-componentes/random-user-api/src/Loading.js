@@ -1,12 +1,10 @@
-// Loading
-import React, { Component } from 'react';
+import React from 'react';
 
-// componente criado para rendeziar a mensagem de "Carregando"
-class Loading extends Component {
+class Loading extends React.Component {
   render() {
     return (
-      <div>Carregando...</div>
-    );
+      <h1>Loading...</h1>
+    )
   }
 }
 

@@ -1,9 +1,10 @@
 import './App.css';
-import PersonDetails from './PersonDetails';
+import Random from './Random';
+
 
 function App() {
   return (
-    <PersonDetails />
+    <Random />
   );
 }
 
