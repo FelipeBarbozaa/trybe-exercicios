@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Nav from './Nav';
+
 
 class Home extends React.Component {
   render() {
     return (
-      <h1>Página Home</h1>
+      <div>
+        <Nav />
+        <h1>Página Home</h1>
+      </div>
     )
   }
 }
