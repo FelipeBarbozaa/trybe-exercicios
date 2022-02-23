@@ -1,19 +1,16 @@
 import React from 'react';
-import MyContext from './MyContext';
+import MessageContext from './context/MessageContext';
 
-class Component extends React.Component {
-  render() {
-    console.log(typeof(this.props.teste));
-    return (
-      <MyContext.Consumer>
-        {
-          value => (
-            <h1>{`A menasgem passada é: ${value.mensagem}`}</h1>
-          )
-        }
-      </MyContext.Consumer>
-    )
-  }
+function Component(props) {
+  console.log(props)
+  return (
+    <MessageContext.Consumer>
+      {
+        (contexto) => (<h1>Mensagem: {contexto.message}</h1>)
+      }
+    </MessageContext.Consumer>
+  )
 }
+
 
 export default Component;
