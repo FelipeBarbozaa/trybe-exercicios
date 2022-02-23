@@ -6,7 +6,9 @@ function Component(props) {
   return (
     <MessageContext.Consumer>
       {
-        (contexto) => (<h1>Mensagem: {contexto.message}</h1>)
+        ({message}) => (
+          <h1>Mensagem: {message}</h1>
+        )
       }
     </MessageContext.Consumer>
   )
