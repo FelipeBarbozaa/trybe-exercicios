@@ -6,14 +6,9 @@ function CountDown() {
   const seconds = timer % 60
 
   useEffect(() => {
-    if (timer > 0) {
-      setTimeout(() => {
-        setTimer(state => state - 1)
-      }, 1000);
-    } else {
-      alert('Chegou ao fim!')
-      clearTimeout();
-    }
+    setTimeout(() => {
+      setTimer(state => state - 1)
+    }, 1000);
   }, [timer])
 
 

@@ -5,7 +5,7 @@ function ListaProvider({ children }) {
   const [allList, addList] = useState([]);
 
   function addNewList(newList){
-    addList([...allList, newList])
+    addList((prevList) => [...prevList, newList])
   }
 
   return (
