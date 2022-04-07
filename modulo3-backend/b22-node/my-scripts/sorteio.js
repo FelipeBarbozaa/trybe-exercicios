@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 
-function runGame() {
+const runGame = () => {
   const sorteio = Math.round(Math.random() * 10);
   const numero = readline.questionInt('Escolha um número: ')
 
