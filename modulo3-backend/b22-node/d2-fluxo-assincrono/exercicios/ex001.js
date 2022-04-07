@@ -8,6 +8,18 @@ const exercicio = (num1, num2, num3) => {
   })
 }
 
+/*
+exercicio(10, 10, 8).then((resultado) => {
+  console.log(`Resultado: ${resultado}`)
+})
+.catch((err) => console.log(`Erro: ${err}`));
+
+
+function exercicio2(num1, num2, num3) {
+  return (num1 + num2) * num3
+}
+*/
+
 module.exports = {
   exercicio
 };
