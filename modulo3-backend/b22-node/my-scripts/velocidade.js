@@ -5,4 +5,4 @@ const tempo = readline.questionInt('Qual é o tempo (segundos)? : ');
 
 const velocidade = distancia / tempo;
 
-console.log(velocidade);
+console.log(`Velocidade de ${velocidade} metros por segundo! `);
