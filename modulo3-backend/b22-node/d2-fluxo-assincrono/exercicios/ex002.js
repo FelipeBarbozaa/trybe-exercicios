@@ -1,3 +1,5 @@
+// Escreva um código para consumir a função construída no exercício anterior.
+
 const { exercicio } = require('./ex001');
 
 const randomNumber = () => {

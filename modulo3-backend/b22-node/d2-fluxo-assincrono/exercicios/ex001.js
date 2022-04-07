@@ -1,3 +1,5 @@
+//Crie uma função que recebe três parâmetros retorna uma Promise 
+
 const exercicio = (num1, num2, num3) => {
   return new Promise((resolve, reject) => {
     if ((num1 + num2) * num3 < 50) return new Error(reject('Valor muito baixo!'))
