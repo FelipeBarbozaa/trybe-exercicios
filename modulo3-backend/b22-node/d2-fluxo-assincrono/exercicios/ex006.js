@@ -5,8 +5,12 @@ const readline = require('readline-sync');
 
 async function choseFile() {
   const file = readline.question('Escreva o nome do arquivo que deseja ler: ');
-  const fileRead = await fs.readFile(file, 'utf8');
-  console.log(fileRead);
+  fs.readFile(file, 'utf8')
+    .then((result) => {
+      console.log('Sucesso!')
+      console.log(result);
+    })
+    .catch(error => console.log(`Erro: Arquivo inexisente!`))
 }
 
 choseFile();
