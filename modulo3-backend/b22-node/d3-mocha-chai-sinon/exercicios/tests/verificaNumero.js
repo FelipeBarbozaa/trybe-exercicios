@@ -13,9 +13,9 @@ describe('Verifica se o número é positivo', () => {
     expect(resultado).to.be.equals('positivo');
   })
 
-  it('Verifica se o valor é um número', () => {
+  it('Verifica se a resposta é uma string', () => {
     const resultado = verificaNumero(5);
-    expect(resultado).to.be.a('number');
+    expect(resultado).to.be.a('string');
   })
 })
 
@@ -30,9 +30,9 @@ describe('Verifica se o número é negativo', () => {
     expect(resultado).to.be.equals('negativo');
   })
   
-  it('Verifica se o valor é um número', () => {
+  it('Verifica se a resposta é uma string', () => {
     const resultado = verificaNumero(-5);
-    expect(resultado).to.be.a('number');
+    expect(resultado).to.be.a('string');
   })
 })
 
@@ -42,8 +42,8 @@ describe('Verifica se o número é neutro', () => {
     expect(resultado).to.be.equals('neutro');
   })
 
-  it('Verifica se o valor é um número', () => {
+  it('Verifica se a resposta é uma string', () => {
     const resultado = verificaNumero(5);
-    expect(resultado).to.be.a('number');
+    expect(resultado).to.be.a('string');
   })
 })
