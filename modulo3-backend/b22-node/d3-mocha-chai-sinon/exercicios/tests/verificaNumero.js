@@ -47,3 +47,10 @@ describe('Verifica se o número é neutro', () => {
     expect(resultado).to.be.a('string');
   })
 })
+
+describe('Verifica se a função aceita apenas números', () => {
+  it('Verifica se ao passar uma string retorna uma mensagem de erro', () => {
+    const resultado = verificaNumero('string');
+    expect(resultado).to.be.equals('O valor deve ser um número!')
+  })
+})
