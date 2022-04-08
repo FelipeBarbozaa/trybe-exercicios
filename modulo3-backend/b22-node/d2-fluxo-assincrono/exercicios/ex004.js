@@ -34,4 +34,16 @@ const exercicio42 = async () => {
   }
 }
 
-exercicio42()
+const exercicio43 = async () => {
+  const arquivoJson = await fs.readFile(arquivo, 'utf8')
+  .then((result) => JSON.parse(result));
+  
+  const novoArquivo = arquivoJson.filter((e) => parseInt(e.id) <= 4)
+  try {
+    fs.writeFile('./simpsonFamily.json', JSON.stringify(novoArquivo))
+    console.log('Arquivo escrito com sucesso!')
+  } catch (e) {
+    console.log(`Erro: ${e}`)
+  }
+}
+
