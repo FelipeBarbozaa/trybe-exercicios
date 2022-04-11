@@ -20,9 +20,21 @@ app.get('/recipes', (req, res) => {
   res.json(recipes);
 });
 
-app.get('drinks', (req, res) => {
+app.get('/drinks', (req, res) => {
   res.json(drinks);
 });
+
+app.get('/drinks-ordered', (req, res) => {
+  res.json(drinks.sort(function(a, b) {
+    return a.name.localeCompare(b.name)
+  }))
+})
+
+app.get('/recipes-ordered', (req, res) => {
+  res.json(recipes.sort(function(a, b) {
+    return a.name.localeCompare(b.name)
+  }))
+})
 
 app.listen(3000, () => {
   console.log('Aplicação ouvindo na porta 3000');
