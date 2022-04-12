@@ -10,6 +10,12 @@ const recipes = [
   { id: 3, name: 'Macarrão com molho branco', price: 35.0, waitTime: 25 },
  ];
 
+ app.get('/validateToken', (req, res) => {
+   const token = req.headers.authorization;
+   if (token.length !== 16) return res.status(401).json({message: 'Invalid token!'});
+   res.status(200).json({message: 'Valid token!'})
+ })
+
  app.get('/recipes', (req, res) => {
    res.status(200).json(recipes);
  })
