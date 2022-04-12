@@ -2,16 +2,30 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const fs = require('fs');
+const crypto = require('crypto');
 app.use(bodyParser.json());
+
+function generateToken() {
+  return crypto.randomBytes(8).toString('hex');
+}
 
 app.get('/ping', (req, res) => {
   return res.status(200).json({ message: 'pong' });
 })
 
 app.post('/hello', (req, res) => {
+  const { authorization } = req.headers;
+  if (!authorization) return res.status(401).json({ message: 'Token invalido! '})
+  if (authorization.length !== 16) return res.status(401).json({ message: 'Token invalido! '})
   const { name } = req.body;
   if (!name) return res.status(404).json({ message: 'Error, name not found!' });
   return res.status(200).json({ message: `Hello, ${name}!` });
+})
+
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+  if(!email || !password || !firstName || !phone) return res.status(401).json({ message: 'Missing fields' })
+  return res.status(200).json({ token: generateToken() });
 })
 
 app.post('/greeting', (req, res) => {
