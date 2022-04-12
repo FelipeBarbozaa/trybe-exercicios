@@ -18,7 +18,12 @@ const drinks = [
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
 
-app.get('/dri')
+app.get('/drinks/:id', (req,res ) => {
+  const { id } = req.params;
+  const drinksFiltred = drinks.find((e) => e.id === parseInt(id));
+  if (!drinksFiltred) return res.status(404).json({ message: 'Drink not found!' });
+  return res.status(200).json(drinksFiltred);
+});
 
 app.put('/drinks/:id', (req, res) => {
   const { id } = req.params;
@@ -26,7 +31,15 @@ app.put('/drinks/:id', (req, res) => {
   const filterIndex = drinks.findIndex((e) => e.id === parseInt(id));
   if (filterIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
   drinks[filterIndex] = { ...drinks[filterIndex], name, price };
-  return res(204).end();
+  return res.status(204).end();
+})
+
+app.delete('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+  const filterIndex = drinks.findIndex((e) => e.id === parseInt(id));
+  if (filterIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+  drinks.splice(filterIndex, 1)
+  return res.status(204).end();
 })
 
 app.get('/recipes/:id', (req, res) => {
