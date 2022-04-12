@@ -26,8 +26,12 @@ app.put('/users/:name/:age', (req, res) => {
 })
 
 app.get('/simpsons', (req,res) => {
-  const simpsons = fs.readFileSync('./simpsons.json', 'utf8')
-  res.status(200).json(JSON.parse(simpsons));
+  try {
+    const simpsons = fs.readFileSync('./simpsons.json', 'utf8')
+    res.status(200).json(JSON.parse(simpsons));
+  } catch (e) {
+    res.status(500).json({ Error: e.message });
+  }
 })
 
 app.get('/simpsons/:id', (req, res) => {
@@ -36,6 +40,17 @@ app.get('/simpsons/:id', (req, res) => {
   const character = JSON.parse(simpsons).find((e) => e.id == id);
   if (!character) return res.status(404).json({ message: 'Character not found! '});
   res.status(200).json(character);
+})
+
+app.post('/simpsons', (req, res) => {
+  const { id, name } = req.body;
+  const simpsons = fs.readFileSync('./simpsons.json', 'utf8');
+  const checkId = JSON.parse(simpsons).find((e) => e.id == id);
+  if (checkId) return res.status(409).json({ message: 'id already exists' });
+  const obj = JSON.parse(simpsons);
+  obj.push({ id, name })
+  fs.writeFileSync('./simpsons.json', JSON.stringify(obj));
+  return res.status(204).end();
 })
 
 app.listen(3000, () => {
