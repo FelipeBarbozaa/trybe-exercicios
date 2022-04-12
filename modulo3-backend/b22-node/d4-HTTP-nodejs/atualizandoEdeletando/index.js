@@ -17,3 +17,42 @@ const drinks = [
   { id: 5, name: 'Cerveja Lata', price: 4.5 },
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
+
+app.get('/dri')
+
+app.put('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const filterIndex = drinks.findIndex((e) => e.id === parseInt(id));
+  if (filterIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+  drinks[filterIndex] = { ...drinks[filterIndex], name, price };
+  return res(204).end();
+})
+
+app.get('/recipes/:id', (req, res) => {
+  const { id } = req.params;
+  const recipesFiltred = recipes.find((e) => e.id === parseInt(id));
+  if (!recipesFiltred) return res.status(404).json({ message: 'Recipe not found!' })
+  return res.status(200).json(recipesFiltred);
+})
+
+app.put('/recipes/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
+  if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+  recipes[recipeIndex] = { ...recipes[recipeIndex], name, price };
+  return res.status(204).end();
+});
+
+app.delete('/recipes/:id', (req, res) => {
+  const { id } = req.params;
+  const recipeIndex = recipes.findIndex((e) => e.id === parseInt(id));
+  if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!'});
+  recipes.splice(recipeIndex, 1);
+  return res.status(204).end();
+})
+
+app.listen(3000, () => {
+  console.log('Ouvindo a porta 3000')
+})
