@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const fs = require('fs');
 app.use(bodyParser.json());
 
 app.get('/ping', (req, res) => {
@@ -22,6 +23,11 @@ app.post('/greeting', (req, res) => {
 app.put('/users/:name/:age', (req, res) => {
   const { name, age } = req.params;
   return res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
+})
+
+app.get('/simpsons', (req,res) => {
+  const simpsons = fs.readFileSync('./simpsons.json', 'utf8')
+  res.status(200).json(JSON.parse(simpsons));
 })
 
 app.listen(3000, () => {
