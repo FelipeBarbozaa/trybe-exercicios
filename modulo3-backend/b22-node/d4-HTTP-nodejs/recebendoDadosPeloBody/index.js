@@ -10,6 +10,16 @@ const recipes = [
   { id: 3, name: 'Macarrão com molho branco', price: 35.0, waitTime: 25 },
  ];
 
+const drinks = [
+  { id: 1, name: 'Refrigerante Lata', price: 5.0 },
+  { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
+  { id: 3, name: 'Suco 300ml', price: 4.0 },
+  { id: 4, name: 'Suco 1l', price: 10.0 },
+  { id: 5, name: 'Cerveja Lata', price: 4.5 },
+  { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
+];
+
+
  app.get('/validateToken', (req, res) => {
    const token = req.headers.authorization;
    if (token.length !== 16) return res.status(401).json({message: 'Invalid token!'});
@@ -20,11 +30,22 @@ const recipes = [
    res.status(200).json(recipes);
  })
 
+ app.get('/drinks', (req, res) => {
+  res.status(200).json(drinks);
+})
+
 app.post('/recipes', (req, res) => {
-  const { id, name, price } = req.body;
-  recipes.push({ id, name, price });
+  const { id, name, price, waitTime } = req.body;
+  recipes.push({ id, name, price, waitTime });
   res.status(201).json({ message: 'Recipe created successfully!' });
 });
+
+
+app.post('/drinks', (req, res) => {
+  const { id, name, price } = req.body;
+  drinks.push({ id, name, price });
+  res.status(201).json({ message: 'Recipe created successfully! '});
+})
 
 fetch(`http://localhost:3000/recipes/`, {
   method: 'POST',
@@ -33,7 +54,7 @@ fetch(`http://localhost:3000/recipes/`, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    id: 4,
+    id: 10,
     name: 'Macarrão com Frango',
     price: 30
   })
