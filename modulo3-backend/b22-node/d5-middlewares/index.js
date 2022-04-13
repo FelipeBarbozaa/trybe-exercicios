@@ -9,6 +9,21 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
+
+const authMiddleWare = require('./auth-middleware');
+
+// Esta rota não passa pelo middleware de autenticação!
+app.get('/open', function (req, res) {
+  res.send('open!')
+});
+
+// Esta rota não passa pelo middleware de autenticação!
+app.get('/recipes', function (req, res) {
+  res.status(200).json(recipes);
+});
+
+app.use(authMiddleWare);
+
 function validateName(req, res, next) {
   const { name } = req.body;
   if (!name || name === '') return res.status(400).json({ message: 'Invalid data!' });
@@ -17,14 +32,12 @@ function validateName(req, res, next) {
 
 app.post('/recipes', validateName, (req, res) => {
   const { id, name, price } = req.body;
-  recipes.push({ id, name, price });
+  const { username } = req.user; // Aqui estamos acessando o usuário encontrado no middleware de autenticação.
+  recipes.push({ id, name, price, chef: username });
   res.status(201).json({ message: 'Recipe created successfully!'})
-})
-
-
-app.get('/recipes', function (req, res) {
-  res.status(200).json(recipes);
 });
+
+
 
 app.get('/recipes/search', function (req, res) {
   const { name, maxPrice } = req.query;
