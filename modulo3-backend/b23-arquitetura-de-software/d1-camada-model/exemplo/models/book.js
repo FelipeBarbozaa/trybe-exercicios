@@ -1,5 +1,5 @@
 const connection = require('./connection');
-const author = require('./')
+const author = require()
 
 const getAll = async () => {
   const [books] = await connection.execute('SELECT * FROM books');
