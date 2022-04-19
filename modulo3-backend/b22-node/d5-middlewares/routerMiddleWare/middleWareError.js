@@ -2,7 +2,13 @@ const express = require('express');
 const fs = require('fs').promises;
 const rescue = require('express-rescue');
 const app = express();
-const errorMiddleWare = require('./errorMiddleWare');
+
+const errorMiddleWare = (err, _req, res, _next) => {
+  if (err.code && err.status) {
+    return res.status(err.status).json({ message: err.message, code: err.code });
+  }
+  return res.status(500).json({ message: err.message });
+}
 
 app.get('/:filename', [rescue(async (req, res) => {
   const file = await fs.readFile(`./${req.params.filename}`);
