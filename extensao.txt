@@ -1,0 +1,12 @@
+Bracket pair colorizer
+Code Runner
+Database Client
+Docker
+ESLint
+Live Server
+Live Share
+Material Icon Theme
+node-snippets
+Node.js Exec
+Omni theme
+Tabnine AI Autocomplete
