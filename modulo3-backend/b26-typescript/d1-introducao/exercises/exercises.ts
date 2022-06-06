@@ -29,3 +29,12 @@ export function rectangle(base: number, height: number): number {
 export function losango(diagonalMaior: number, diagonalMenor: number): number {
   return (diagonalMaior * diagonalMenor) / 2;
 }
+
+export function trapezio(baseMaior: number, baseMenor: number, altura: number): number {
+  return ((baseMaior + baseMenor) * altura ) / 2;
+}
+
+export function circulo(raio: number): number {
+  const pi = 3.14;
+  return pi * raio**2;
+}

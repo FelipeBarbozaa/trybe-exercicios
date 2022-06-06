@@ -21,3 +21,9 @@ console.log(`Retângulo de base 100cm e altura 200cm: ${Exercise.rectangle(100, 
 console.log(`Losango com diagonal maior de 32cm e menor 18cm: ${Exercise.losango(32, 18)}cm²`);
 console.log(`Losango com diagonal maior de 200cm e menor 50cm: ${Exercise.losango(200, 50)}cm²`);
 console.log(`Losango com diagonal maior de 75cm e menor 25cm: ${Exercise.losango(75, 25)}cm²`);
+
+console.log(`Àrea de um trapezio com base maior de 100cm, menor 70cm e alturas 50cm: ${Exercise.trapezio(100, 70, 50)} cm²`);
+console.log(`Àrea de um trapezio com base maior de 75cm, menor 50cm e alturas 35cm: ${Exercise.trapezio(75, 50 ,35)} cm²`);
+console.log(`Àrea de um trapezio com base maior de 150cm, menor 120cm e alturas 80cm: ${Exercise.trapezio(150, 120, 80)} cm²`);
+
+console.log(`Área de um circulo com raio de 25cm: ${Exercise.circulo(25)}cm²`);
