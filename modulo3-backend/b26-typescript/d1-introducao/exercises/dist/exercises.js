@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.losango = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.circulo = exports.trapezio = exports.losango = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Olá ${name}!`;
 }
@@ -33,3 +33,12 @@ function losango(diagonalMaior, diagonalMenor) {
     return (diagonalMaior * diagonalMenor) / 2;
 }
 exports.losango = losango;
+function trapezio(baseMaior, baseMenor, altura) {
+    return ((baseMaior + baseMenor) * altura) / 2;
+}
+exports.trapezio = trapezio;
+function circulo(raio) {
+    const pi = 3.14;
+    return pi * raio ** 2;
+}
+exports.circulo = circulo;
