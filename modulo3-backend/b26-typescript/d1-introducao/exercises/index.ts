@@ -27,3 +27,5 @@ console.log(`Àrea de um trapezio com base maior de 75cm, menor 50cm e alturas 3
 console.log(`Àrea de um trapezio com base maior de 150cm, menor 120cm e alturas 80cm: ${Exercise.trapezio(150, 120, 80)} cm²`);
 
 console.log(`Área de um circulo com raio de 25cm: ${Exercise.circulo(25)}cm²`);
+console.log(`Área de um circulo com raio de 25cm: ${Exercise.circulo(25)}cm²`);
+console.log(`Área de um circulo com raio de 25cm: ${Exercise.circulo(25)}cm²`);
