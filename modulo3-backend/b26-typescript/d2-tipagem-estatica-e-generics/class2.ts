@@ -4,10 +4,13 @@ enum Color {
   Brown = "Castanhos",
 }
 
+interface Dog {
+  name: string,
+  age: number,
+  color?: string
+}
+
 class Dog {
-  name: string;
-  age: number;
-  color?: string;
     constructor(name: string, age: number, color?: Color) {
       this.name = name;
       this.age = age;
