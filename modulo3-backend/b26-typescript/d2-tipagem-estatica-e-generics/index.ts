@@ -51,5 +51,7 @@ function retornarCPF(cpf: number | string){
 
 retornarCPF(12550145)
 
-type estadoDaMatéria = "liquido" | "solido" | "gasoso";
-
+type EstadoDaMatéria = "liquido" | "solido" | "gasoso";
+type Cpf = string | number;
+type SistemaOperacional = "Linux" | "Mac" | "Windows";
+type Vogais = "a" | "e" | "i" | "o" | "u";
