@@ -41,3 +41,15 @@ type address = {
   numero: number,
 };
 
+//======================================================================
+
+// A função abaixo pode receber tanto um número
+// quanto uma string.
+function retornarCPF(cpf: number | string){
+  console.log("Seu CPF é: " + cpf);
+}
+
+retornarCPF(12550145)
+
+type estadoDaMatéria = "liquido" | "solido" | "gasoso";
+
