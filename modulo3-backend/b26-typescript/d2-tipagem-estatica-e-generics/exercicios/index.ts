@@ -1,25 +1,20 @@
-type Slices = 4 | 6 | 8;
+type Slices = 4 | 6 | 8
+type Comum = 'Calabresa' | 'Frango' | 'Pepperoni';
+type Vegetariana = 'Marguerita' | 'Palmito' | 'Cogumelo';
+type Doce = 'Nutlea' | 'Goiabada com queijo' | 'Marshmallow'
 
 interface Pizza {
   flavor: string;
   slices: Slices;
 }
 
-const calabresa: Pizza = {
+interface PizzaComum extends Pizza {
+  flavor: Comum
+}
+
+const calabresa: PizzaComum = {
   flavor: 'Calabresa',
-  slices: 8
-};
-
-const marguerita: Pizza = {
-  flavor: 'Marguerita',
   slices: 6
-};
-
-const nutela: Pizza = {
-  flavor: 'Nutela',
-  slices: 4
 }
 
 console.log(calabresa);
-console.log(marguerita);
-console.log(nutela);
