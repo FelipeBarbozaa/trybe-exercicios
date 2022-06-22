@@ -66,12 +66,25 @@ class Pedido {
   }
 
   calcTotal() {
+    const result = this._items.reduce((sum, e) => {
+      sum += e.price;
+      return sum;
+    }, 0)
+    return result;
+  }
 
+  calcWithDiscount() {
+    const result = this.calcTotal();
+    const discount = result * this._discount;
+    console.log(result - discount)
   }
 }
 
 const client1 = new Client('Felipe');
-console.log(client1);
-const sandwich = new Item('Sanduiche de presunto', 5.00);
+
+const sandwich = new Item('Sanduiche de presunto', 13.00);
 const juice = new Item('Suco de Abacaxí', 5.00);
-console.log(sandwich);
+
+const order = new Pedido(client1, [sandwich, juice], 'dinheiro', 0.10)
+order.calcTotal();
+order.calcWithDiscount();
