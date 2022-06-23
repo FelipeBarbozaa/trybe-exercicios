@@ -1,23 +1,10 @@
 import Employee from "./Employee";
-import Person from "./Person";
+import Subject from "./Subject";
 
-export default class Teacher extends Person implements Employee {
-  _registration: string;
-  _admissionDate: Date;
-  _salary: number;
-  private _subject: Subject
-  constructor(
-    nome: string,
-    birthDate: Date,
-    salary: number,
-    subject: Subject,
-    ) {
-    super(nome, birthDate);
-
-    this._subject = subject;
-    this._salary = salary;
-    this._admissionDate = new Date();
-    this._registration = this.generateRegistration();
+export default class Teacher extends Employee {
+  constructor(private _subject: Subject, name: string, bitrhDay: Date, salary: number) {
+    super(name, bitrhDay, salary);
+    this.enrollment = this.generateEnrollment();
   }
 
   get subject() {
@@ -25,18 +12,16 @@ export default class Teacher extends Person implements Employee {
   }
 
   set subject(value: Subject) {
-    this._subject = value;
+    this.subject = value;
   }
 
-  get salary() {
-    return this._salary;
-  }
+  generateEnrollment(): string {
+    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
 
-  set salary(value: number) {
-    this._salary = value;
-  }
-
-  generateRegistration(): string {
-    return `a`;
+    return `PRF${randomStr}`;
   }
 }
+
+const materia = new Subject('Matemática');
+const professor = new Teacher(materia, 'Felipe', new Date('2000/04/21'), 5000);
+console.log(professor)

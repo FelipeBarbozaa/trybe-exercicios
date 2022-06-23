@@ -1,7 +1,7 @@
 import Enrollable from "./IEnrollable";
 import Person from "./Person";
 
-class Employee extends Person implements Enrollable {
+export default class Employee extends Person implements Enrollable {
   _enrollment: string
   private _admissionDate: Date;
   constructor(name: string, birthday: Date, private _salary: number) {
