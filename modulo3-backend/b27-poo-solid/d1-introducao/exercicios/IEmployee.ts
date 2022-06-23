@@ -1,7 +1,7 @@
 export default interface Employee {
-  registration: string;
-  salary: number;
-  admissionDate: Date;
+  _registration: string;
+  _salary: number;
+  _admissionDate: Date;
 
   generateRegistration(): string;
 }
