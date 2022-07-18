@@ -1,0 +1,11 @@
+db.bios.insertOne({
+  "_id" : 1,
+  "name" : { "first" : 'Felipe', "last" : 'Barboza' },       // documento embedado ou subdocumento
+  "birth" : newDate(2000-04-21),
+  "death" : newDate(2100-04-21),
+  "contribs" : [ <string>, ... ],                           // Array de Strings
+  "awards" : [
+      { "award" : <string>, year: <number>, by: <string> }  // Array de subdocumentos
+      ...
+  ]
+});
