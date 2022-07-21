@@ -70,3 +70,5 @@ db.xmen.updateMany(
     $set: { areas: ["Outside"] },
     $currentDate: { lastUpdate: { $type: "timestamp" } }
   }
+)
+
