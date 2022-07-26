@@ -1,4 +1,6 @@
 import * as express from 'express';
+import CupModel from './repository/CupRepository'
+import createConnection from './models/connection';
 
 class App {
   public app: express.Express;
@@ -7,6 +9,7 @@ class App {
     this.app = express();
 
     this.config();
+    createConnection();
   }
 
   private config(): void {
@@ -20,7 +23,12 @@ class App {
     this.app.use(express.json());
     this.app.use(accessControl);
 
-    this.app.get('/', (req, res) => res.json({ ok: true }));
+    this.app.get('/', async (req, res) => {
+      const model = new CupModel();
+      const result = await model.getAll();
+      console.log(result);
+      return res.status(200).json(result);
+    });
   }
 
   public start(PORT: string | number): void {
