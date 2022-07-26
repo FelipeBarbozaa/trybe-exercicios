@@ -15,4 +15,9 @@ export default class CupController {
     const cup = await this._cupService.getByYear(parseInt(year));
     return res.status(StatusCodes.OK).json(cup);
   }
+
+  async create(req: Request, res: Response) {
+    await this._cupService.create(req.body);
+    return res.status(StatusCodes.CREATED).end();
+  }
 }

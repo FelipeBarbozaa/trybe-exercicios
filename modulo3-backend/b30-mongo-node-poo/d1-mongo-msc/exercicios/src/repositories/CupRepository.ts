@@ -13,4 +13,8 @@ export default class CupRepository implements ICupModel {
     const cup = await this._cupModel.find({ year });
     return cup;
   }
+
+  async create(data: ICup): Promise<void> {
+    await this._cupModel.create(data);
+  }
 }

@@ -5,11 +5,11 @@ export interface ICup {
   hostCountry: string;
   champions: string;
   runnerUp: string;
+  editionStrikers?: string[];
   editionGoals?: number;
-  editionStrikers: string[];
-  bestPlayer: string;
+  bestPlayer?: string;
   bestGoalkeeper?: string;
-  bestYoungPlayer: string;
+  bestYoungPlayer?: string;
 }
 
 export const CupSchema = new Schema<ICup>({
@@ -17,11 +17,11 @@ export const CupSchema = new Schema<ICup>({
   hostCountry: { type: String, required: true },
   champions: { type: String, required: true },
   runnerUp: { type: String, required: true },
+  editionStrikers: { type: [{type: String}], required: false },
   editionGoals: { type: Number, required: false },
-  editionStrikers: { type: [{type: String}], required: true },
-  bestPlayer: { type: String, required: true },
+  bestPlayer: { type: String, required: false },
   bestGoalkeeper: { type: String, required: false },
-  bestYoungPlayer: { type: String, required: true }
+  bestYoungPlayer: { type: String, required: false }
 }, {
   versionKey: false,
 });
@@ -29,4 +29,5 @@ export const CupSchema = new Schema<ICup>({
 export interface ICupModel {
   getAll(): Promise<ICup[]>;
   getByYear(year: number): Promise<ICup[]>;
+  create(data: ICup): Promise<void>;
 }
