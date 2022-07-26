@@ -1,6 +1,8 @@
 import * as express from 'express';
-import CupModel from './repository/CupRepository'
+import ErrorMiddleware from './middlewares/ErrorMiddleware';
+import 'express-async-errors';
 import createConnection from './models/connection';
+import cupRouter from './routes/CupRouter';
 
 class App {
   public app: express.Express;
@@ -23,12 +25,8 @@ class App {
     this.app.use(express.json());
     this.app.use(accessControl);
 
-    this.app.get('/', async (req, res) => {
-      const model = new CupModel();
-      const result = await model.getAll();
-      console.log(result);
-      return res.status(200).json(result);
-    });
+    this.app.use('/', cupRouter);
+    this.app.use(ErrorMiddleware)
   }
 
   public start(PORT: string | number): void {

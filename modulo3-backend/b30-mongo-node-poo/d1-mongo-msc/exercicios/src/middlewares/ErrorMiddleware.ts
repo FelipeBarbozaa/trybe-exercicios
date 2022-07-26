@@ -1,0 +1,11 @@
+import { Request, Response, NextFunction } from 'express';
+import { StatusCodes } from 'http-status-codes';
+import ErrorHandler from '../utils/ErrorHandler';
+
+export default (error: ErrorHandler, req: Request, res: Response, next: NextFunction) => {
+  if (error.status) {
+    return res.status(error.status).json({ message: error.message });
+  }
+
+  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error.message });
+}

@@ -28,4 +28,5 @@ export const CupSchema = new Schema<ICup>({
 
 export interface ICupModel {
   getAll(): Promise<ICup[]>;
+  getByYear(year: number): Promise<ICup[]>;
 }
