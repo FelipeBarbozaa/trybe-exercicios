@@ -20,7 +20,7 @@
       }
     };
 
-   /* public create = async (req: Request, res: Response): Promise<Response> => {
+    public create = async (req: Request, res: Response): Promise<Response> => {
       try {
         const book = await this.bookService.createBook(req.body);
         return res.status(201).send(book);
@@ -28,6 +28,7 @@
         return res.status(500).send({ message: this.notFound });
       }
     };
+   /* 
 
     public getBook = async (req: Request, res: Response): Promise<Response> => {
       try {

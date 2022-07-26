@@ -11,11 +11,11 @@
       return books;
     }
 
-    /*public async createBook(bookData: object): Promise<IBook> {
+    public async createBook(bookData: object): Promise<IBook> {
       const book = await this.bookModel.createBook(bookData);
       return book;
     }
-
+    /*
     public async getBook(id: string): Promise<IBook | null> {
       const data = await this.bookModel.getBook(id);
       return data;
