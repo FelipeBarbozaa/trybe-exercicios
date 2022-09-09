@@ -1,13 +1,11 @@
 def write_file(path):
-  file = open(path, mode="w")
-  for num in range (0, 10000):
-    file.write('{:d}\n'.format(num).zfill(5))
-  file.close()
+  with open(path, mode="w") as file:
+    for num in range (0, 10000):
+      file.write('{:d}\n'.format(num).zfill(5))
 
-  file = open("texto.txt", mode="r")
-  content = file.read()
-  print(content)
-  file.close()
+  with open(path, mode="r") as file:
+    content = file.read()
+    print(content)
 
 if __name__ == "__main__":
   write_file('texto.txt')
