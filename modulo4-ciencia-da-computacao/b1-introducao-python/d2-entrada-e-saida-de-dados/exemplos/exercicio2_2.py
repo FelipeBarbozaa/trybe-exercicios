@@ -4,10 +4,10 @@ total = 0
 numeros = input('Digite os valores e separe-os com um espaço: ')
 numerosSeparados = numeros.split(' ')
 
-for x in range(len(numerosSeparados)):
-  if numerosSeparados[x].isdigit():
-    total += int(numerosSeparados[x])
+for numero in numerosSeparados:
+  if numero.isdigit():
+    total += int(numero)
   else:
-    print(f"Erro ao somar valores, {numerosSeparados[x]} é um valor inválido")
+    print(f"Erro ao somar valores, {numero} é um valor inválido")
 
 print(f"A soma total de todos os digitos válidos é de: {total}")
