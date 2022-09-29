@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ 
+body{
+  background-color: rgb(245, 231, 231);
+}
+.container header p {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+header{
+  background-color: #e7e7e7;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+#lista-menu a{
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  padding: 5px;
+  display: block;
+  padding: 0 0.6rem;
+  margin: 1rem 0rem;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lista-menu li{
+  margin-right: 8px;
+  display: inline-block;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 812px) {
+  #btn-mobile{
+    display: block;
+    margin-right: 10px;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+  #lista-menu a{
+    padding: 12px;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+  }
+
+  #lista-menu li{
+    margin-right: 8px;
+    display: block;
+  }
+
+  #lista-menu{
+   display: block;
+   position: absolute;
+   /* Para ficar em cima de tudo*/
+   width: 100%;
+   /*Definindo a largura de 100% da tela*/
+   top: 40px;
+   right: 0px;
+   background-color: #e7e7e7;
+   height: 0;
+   transition: .6s;
+   /*100vh = Ocupa 100% da altura da tela*/
+   z-index: 1000;
+   /*Ficar em cima de todos os elementos do site*/
+   visibility: hidden;
+   overflow-y: hidden;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p, li {
+    font-size: 1.3em;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  #nav.active #lista-menu {
+    visibility: visible;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+
+  .container-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-one h2 {
+    margin-bottom: 8px;
+    padding: 5px;
+  }
+
+  .lista-chapters {
+    padding: 5px;
+  }
+
+  .aside-two h2 {
+    margin-bottom: 8px;
+    padding: 5px;
+  }
+
+  .main-content h1, p {
+    padding: 5px;
+    margin: 20px 0 0 0;
+  }
+
+  .main-content {
+    margin: auto;
+    width: 80%;
+  }
+
+}

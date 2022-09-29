@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#menu-h {
+    background-color: #111111;
+    text-align: center;
+}
+
+#menu-h ul{
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+}
+
+#menu-h ul li{
+    display: inline;
+}
+
+#menu-h ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    transition: color .4s
+
+}
+
+#menu-h ul li a:hover {
+    color: #2FC18C;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+body#index{
+    background-color: #046B53;
+    opacity: 0.8;
+}
+
+pre{
+    background-color: #111111;
+    padding: 30px;
+    color: white;
+    font: 2.7em bolder Courier, monospace;
+}
+#section-aprendizado{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 1000px;
+    margin: auto;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.281);
+}
+#section-contato{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.281);
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    
+
+}
+
+
+body{
+    background-image: linear-gradient(to right, rgb(51, 51 ,51), rgba(80, 75, 75, 0.829)   );
+}
+
+p#começo, p#nome{
+    text-align: center;
+    top: 30px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+p#começo{
+    font-size: 40px;
+    color: white;
+    margin: auto;
+}
+#introduçao{
+    text-align: center;
+    font: normal bold 1.5em 'Courier New', Courier, monospace;
+    padding: 10px ; 
+}
+#nome{
+    font: normal bold 1.5em Torrent;
+    color: white;
+    position: relative;
+
+}
+#section-index{
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    right: 300px;
+}
+.cursos{
+    width: 100px;
+}
+.span-aprendizado{
+    position: relative;
+    bottom: 43px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6em;
+}
+footer#aprendizado{
+    top: 15px;
+}
+.contato {
+    width: 60px;
+    margin: 10px;
+    border-radius: 40px;
+}
+.divcontato {
+    position: relative;
+    left: 150px;
+}
+.divcontato img:hover {
+    width: 66px;
+    transition: 0.5s;
+}
+.foto-recomendar{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+   
+}
+div.recomendar{
+    text-align: center;
+}
+div.recomendar img {
+    margin: 10px;
+}
+div.recomendar div {
+    position: relative;
+    bottom: 253px;
+    right: 107px;
+    font: italic 1.8em bold Arial;
+}
+div#gabriel {
+    position: relative;
+    bottom: 285px;
+    right: -115px;
+}
+abbr{
+    text-decoration: none;
+}
+div img.cursos:hover{
+    width: 110px;
+    transition: 0.5s;
+}
+.minhafoto{
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    bottom: 24px;
+    left: 900px;
+}
+#footerinicio {
+    bottom: 27px;
+}
+#descricao{
+    font-size: 26px;
+}
+.final{
+    color: white;
+}

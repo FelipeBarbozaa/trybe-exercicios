@@ -1,0 +1,26 @@
+div:hover {
+    border: solid;
+}
+
+div:nth-child(3) h3{
+    color: rgb(15, 163, 221);
+    font-style: italic;
+}
+div:nth-child(4) h3{
+    color: red;
+}
+div:nth-child(5) h3{
+    color: green;
+    font-size: 50px;
+    font-style: italic;
+}
+div:nth-child(6) h3{
+    color: rgb(1, 1, 19);
+}
+div:nth-child(7) h3{
+    color: rgb(231, 217, 190);
+    font-style: italic;
+}
+h3{
+    text-decoration: underline;
+}

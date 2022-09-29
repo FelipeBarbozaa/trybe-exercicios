@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios forms</title>
+  <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <form target="get">
+    <fieldset>
+      <div class="container">
+        <label for="nome">Nome:</label>
+        <input id="nome" name="nome" required maxlength="40" type="text" class="form-control">
+      </div>
+
+      <div class="container">
+        <label for="email">Email:</label>
+        <input type="text" name="email" required maxlength="50" id="email" class="form-control">
+      </div>
+
+      <div class="container">
+        <label for="cpf">CPF:</label>
+        <input class="form-control" required maxlength="11" type="text" class="text" name="cpf" id="cpf">
+      </div>
+
+      <div class="container">
+        
+        <div class="col-md-4">
+          <label for="endereço">Endereço:</label>
+          <input id="endereço" maxlength="200" required name="endereço" type="text" class="form-control">
+        </div>
+
+      <div class="col-md-2">
+          <label for="estado">Estado:</label>
+          <select class="form-control" required name="estado" id="estado"></select>
+      </div>
+
+      <div class="col-md-3">
+          <label for="cidade">Cidade:</label>
+          <input type="text" maxlength="28" required name="cidade" class="form-control" id="cidade">
+      </div>
+    </div>
+      
+      <div class="container mt-2">
+        <label for="">Tipo de moradia </label><br>
+        <input required type="radio" name="tipo" class="form-check-input" checked id="casa" value="casa">
+        <label for="casa">Casa </label>
+        <input required type="radio" name="tipo" class="form-check-input" id="apartamento" value="apartamento">
+        <label for="apartamento"> Apartamento</label>
+      </div>
+      
+    </fieldset>
+
+    <fieldset>
+
+      <div class="container form-floating">
+        <textarea class="form-control" placeholder="Experiências anteriores" maxlength="1000" required name="textarea" id="textarea" style="height: 150px"></textarea>
+        <label for="textarea">Experiências anteriores</label>
+      </div>
+
+      <div class="container">
+        <label for="cargo">Cargo:</label>
+        <input class="form-control" maxlength="40" required type="text" name="cargo" id="cargo">
+      </div>
+
+      <div class="container">
+        <label for="descricao">Descrição do cargo:</label>
+        <input class="form-control" maxlength="500" required type="text" name="descricao" id="descricao">
+      </div>
+
+      <div class="container">
+        <label for="inicio">Data de início:</label>
+        <input required placeholder="dd/mm/aaaa" maxlength="10" type="text" id="inicio" class="form-control">
+      </div>
+
+    </fieldset>
+    <div class="container">
+      <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+    </div>
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
